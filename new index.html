@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024, initial-scale=1.0">
+  <title>Sosina Shimeles | Portfolio <i class="fas fa-stethoscope"></i></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <h3>Dr. Sosina Shimeles <i class="fas fa-stethoscope"></i></h3>
+    </div>
+    <div class="nav-right">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header id="home">
+    <div class="typing"></div>
+    <h1>Sosina Shimeles</h1>
+    <p>
+      Pediatrician <i class="fas fa-baby"></i> | Student <i class="fas fa-graduation-cap"></i> | Psychologist <i class="fas fa-brain"></i>
+    </p>
+  </header>
+
+  <!-- Typing effect -->
+  <script>
+    const typingElement = document.querySelector(".typing");
+    const textBefore = "I'm a ";
+    const textUnderlined = "DOCTOR";
+    const textAfter = "!";
+
+    const underlineSpan = document.createElement("span");
+    underlineSpan.classList.add("underline");
+
+    let indexBefore = 0, indexUnder = 0, indexAfter = 0;
+
+    function typeText() {
+      if (indexBefore < textBefore.length) {
+        typingElement.append(textBefore.charAt(indexBefore));
+        indexBefore++;
+        setTimeout(typeText, 100);
+      } else if (indexUnder < textUnderlined.length) {
+        underlineSpan.append(textUnderlined.charAt(indexUnder));
+        indexUnder++;
+        if (!typingElement.contains(underlineSpan)) typingElement.appendChild(underlineSpan);
+        setTimeout(typeText, 100);
+      } else if (indexAfter < textAfter.length) {
+        typingElement.append(textAfter.charAt(indexAfter));
+        indexAfter++;
+        setTimeout(typeText, 100);
+      }
+    }
+
+    window.onload = typeText;
+  </script>
+
+  <main>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <ul class="about-list">
+            <li><strong>Name:</strong> Sosina Shimeles</li>
+            <li><strong>Profession:</strong> Aspiring Psychologist & Pediatrician</li>
+            <li><strong>Degree:</strong> Master</li>
+            <li><strong>Website:</strong> Sosina Shimeles | Portfolio</li>
+            <li><strong>Goal:</strong> I am an aspiring psychologist and pediatrician, passionate about supporting the physical and emotional well-being of children. I believe true healing involves both body and mind, and I am dedicated to learning how medical care and psychology can work together to help young people thrive. With curiosity, compassion, and commitment, I aim to make a positive impact on the lives of children and their families.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="card">
+          <h3>Child Behavior Observation</h3>
+          <p>I conducted structured observations of children during play and group activities to explore how their emotions influence their behavior. This experience strengthened my empathy, active listening, and patience—key skills for supporting children’s emotional development.</p>
+        </div>
+        <div class="card">
+          <h3>Mental Health Awareness Project</h3>
+          <p>I created and delivered a school presentation on the importance of mental health and emotional well-being. The project aimed to reduce stigma and encourage open conversations about feelings, emphasizing that mental health is just as important as physical health.</p>
+        </div>
+        <div class="card">
+          <h3>Anxiety Management in Children</h3>
+          <p>This project focused on identifying early signs of anxiety in children and evaluating intervention strategies. Through structured observations and parent interviews, I developed approaches to support emotional regulation and reduce stress in daily routines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">Child Development</div>
+        <div class="skill">Behavioral Observation and Assessment</div>
+        <div class="skill">Mental Health Education and Counseling</div>
+        <div class="skill">Research and Data Interpretation</div>
+        <div class="skill">Basic Web Design</div>
+        <div class="skill">Communication and Public Speaking</div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-container">
+        <div class="card">
+          <h3>Helping Children Cope with Stress</h3>
+          <p>Learn how to recognize stress in children and support their emotional well-being with simple, practical strategies.</p>
+        </div>
+        <div class="card">
+          <h3>Encouraging Emotional Expression</h3>
+          <p>Practical ways to help children share their feelings and build emotional intelligence from a young age.</p>
+        </div>
+        <div class="card">
+          <h3>Building Resilience in Children</h3>
+          <p>Strategies to help children develop confidence, coping skills, and mental strength for everyday challenges.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-container">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="item">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <p>Address:<br><a href="#location">Adiss, Ethiopia</a></p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-envelope icon"></i>
+            <p>Email: SosinaShimeles87@gmail.com</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-phone icon"></i>
+            <p>Call me:<br>+251 977 43 77 06</p>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-share-nodes icon"></i>
+            <div class="social-section">
+              <p>Social Media:</p>
+              <div class="social-icons">
+                <i class="fa-brands fa-facebook-f small-icon"></i>
+                <i class="fa-brands fa-instagram small-icon"></i>
+                <i class="fa-brands fa-x small-icon"></i>
+                <i class="fa-brands fa-telegram small-icon"></i>
+                <i class="fa-brands fa-linkedin-in small-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="#" method="post">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Subject" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+      <h2>Location</h2>
+      <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1972.0403619201443!2d39.07072924986065!3d8.683873633052022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b1121191a3d0b%3A0x1cf3f7099f8eb376!2sAlex%20Grocery!5e0!3m2!1sen!2set!4v1762434092420!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background:#050000; color:white; text-align:center; padding:25px 10px; margin-top:10px;">
+    &copy; 2025 Sosina Shimeles. All rights reserved.
+  </footer>
+
+</body>
+</html>
