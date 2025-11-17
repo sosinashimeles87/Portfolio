@@ -79,7 +79,7 @@ header p {
     max-width: 600px;
 }
 
-/* Typing Effect */
+
 .typing {
     font-size: 30px;
     font-family: Arial, sans-serif;
@@ -450,6 +450,7 @@ input[type="submit"]:hover {
 }
 
 }
+
 
 
 
