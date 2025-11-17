@@ -79,23 +79,6 @@ header p {
     max-width: 600px;
 }
 
-
-.typing {
-    font-size: 30px;
-    font-family: Arial, sans-serif;
-    border-right: 3px solid #007bff;
-    padding-right: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: left;
-    display: inline-block;
-}
-
-.underline {
-    text-decoration: underline;
-    text-decoration-color: #3399ff;
-    text-decoration-thickness: 2px;
-    font-weight: bold;
 }
 section {
     padding: 80px 20px;
@@ -450,6 +433,7 @@ input[type="submit"]:hover {
 }
 
 }
+
 
 
 
